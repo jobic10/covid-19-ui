@@ -33,6 +33,7 @@ class InfoScreen extends StatelessWidget {
                     SymptomCard(
                       imagePath: 'assets/images/headache.png',
                       title: 'Headache',
+                      isActive: true,
                     ),
                     SymptomCard(
                       imagePath: 'assets/images/caugh.png',
@@ -55,37 +56,46 @@ class InfoScreen extends StatelessWidget {
 
 class SymptomCard extends StatelessWidget {
   final String imagePath, title;
+  final bool isActive;
   const SymptomCard({
     Key? key,
     required this.imagePath,
     required this.title,
+    this.isActive = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-                offset: Offset(0, 10),
-                blurRadius: 20,
-                color: kActiveShadowColor)
-          ],
-        ),
-        child: Column(
-          children: [
-            Image.asset(
-              imagePath,
-              height: 90,
-            ),
-            Text(
-              title,
-              style: TextStyle(fontWeight: FontWeight.w600),
-            ),
-          ],
-        ));
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+        boxShadow: [
+          isActive
+              ? BoxShadow(
+                  offset: Offset(0, 10),
+                  blurRadius: 20,
+                  color: kActiveShadowColor)
+              : BoxShadow(
+                  offset: Offset(0, 3),
+                  blurRadius: 6,
+                  color: kShadowColor,
+                )
+        ],
+      ),
+      child: Column(
+        children: [
+          Image.asset(
+            imagePath,
+            height: 90,
+          ),
+          Text(
+            title,
+            style: TextStyle(fontWeight: FontWeight.w600),
+          ),
+        ],
+      ),
+    );
   }
 }
