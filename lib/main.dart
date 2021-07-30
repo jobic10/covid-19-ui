@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kBodyTextColor),
         ),
       ),
-      home: InfoScreen(),
+      home: HomeScreen(),
     );
   }
 }
