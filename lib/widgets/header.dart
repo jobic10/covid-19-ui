@@ -34,7 +34,7 @@ class MyHeader extends StatelessWidget {
             ],
           ),
           image: DecorationImage(
-            image: AssetImage(imagePath),
+            image: AssetImage('assets/images/virus.png'),
           ),
         ),
         child: Column(
@@ -50,7 +50,7 @@ class MyHeader extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   SvgPicture.asset(
-                    'assets/icons/Drcorona.svg',
+                    imagePath,
                     width: 230,
                     fit: BoxFit.fitWidth,
                     alignment: Alignment.topCenter,

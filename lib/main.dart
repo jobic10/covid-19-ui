@@ -1,4 +1,5 @@
 import 'package:covid_19_ui/constant.dart';
+import 'package:covid_19_ui/info_screen.dart';
 import 'package:covid_19_ui/widgets/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           bodyText1: TextStyle(color: kBodyTextColor),
         ),
       ),
-      home: HomeScreen(),
+      home: InfoScreen(),
     );
   }
 }
