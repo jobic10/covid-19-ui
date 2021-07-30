@@ -108,8 +108,14 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             children: [
               SvgPicture.asset('assets/icons/maps-and-flags.svg'),
+              SizedBox(
+                width: 20,
+              ),
               Expanded(
                 child: DropdownButton(
+                  isExpanded: true,
+                  underline: SizedBox(),
+                  icon: SvgPicture.asset('assets/icons/dropdown.svg'),
                   items: (['Nigeria', 'London', 'Germany', 'Canada', 'Spain']
                       .map<DropdownMenuItem<String>>((value) =>
                           DropdownMenuItem(value: value, child: Text(value)))
