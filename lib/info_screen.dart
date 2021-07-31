@@ -15,8 +15,7 @@ class InfoScreen extends StatelessWidget {
           children: [
             MyHeader(
               imagePath: 'assets/icons/coronadr.svg',
-              textTop: 'Get to know',
-              textBottom: 'About COVID-19',
+              text: 'Get to know \n about COVID-19',
               pop: true,
             ),
             Padding(

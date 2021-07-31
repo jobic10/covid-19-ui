@@ -39,8 +39,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             MyHeader(
               imagePath: 'assets/icons/Drcorona.svg',
-              textTop: 'All you need',
-              textBottom: 'is stay at home!!',
+              text: 'All you need is\nstay at home!!',
             ),
             Container(
               height: 60,

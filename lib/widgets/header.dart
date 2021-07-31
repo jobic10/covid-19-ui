@@ -6,13 +6,12 @@ import '../info_screen.dart';
 
 class MyHeader extends StatelessWidget {
   final String imagePath;
-  final String textTop, textBottom;
+  final String text;
   final bool pop;
   const MyHeader({
     Key? key,
     required this.imagePath,
-    required this.textTop,
-    required this.textBottom,
+    required this.text,
     this.pop = false,
   }) : super(key: key);
 
@@ -49,7 +48,10 @@ class MyHeader extends StatelessWidget {
                 pop
                     ? Navigator.of(context).pop()
                     : Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => InfoScreen()));
+                        MaterialPageRoute(
+                          builder: (context) => InfoScreen(),
+                        ),
+                      );
               },
               child: Align(
                 alignment: Alignment.topRight,
@@ -71,7 +73,7 @@ class MyHeader extends StatelessWidget {
                     top: 20,
                     left: 150,
                     child: Text(
-                      '$textTop \n$textBottom',
+                      '$text',
                       style: kHeadingTextStyle.copyWith(color: Colors.white),
                     ),
                   ),
