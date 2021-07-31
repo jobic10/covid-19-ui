@@ -14,9 +14,11 @@ class InfoScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             MyHeader(
-                imagePath: 'assets/icons/coronadr.svg',
-                textTop: 'Get to know',
-                textBottom: 'About COVID-19'),
+              imagePath: 'assets/icons/coronadr.svg',
+              textTop: 'Get to know',
+              textBottom: 'About COVID-19',
+              pop: true,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(

@@ -7,11 +7,13 @@ import '../info_screen.dart';
 class MyHeader extends StatelessWidget {
   final String imagePath;
   final String textTop, textBottom;
+  final bool pop;
   const MyHeader({
     Key? key,
     required this.imagePath,
     required this.textTop,
     required this.textBottom,
+    this.pop = false,
   }) : super(key: key);
 
   @override
@@ -44,8 +46,10 @@ class MyHeader extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => InfoScreen()));
+                pop
+                    ? Navigator.of(context).pop()
+                    : Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => InfoScreen()));
               },
               child: Align(
                 alignment: Alignment.topRight,
